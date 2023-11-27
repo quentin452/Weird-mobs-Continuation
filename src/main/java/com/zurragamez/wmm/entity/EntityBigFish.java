@@ -22,7 +22,6 @@ public class EntityBigFish extends EntityWaterMob {
    private float randomMotionVecX;
    private float randomMotionVecY;
    private float randomMotionVecZ;
-   private static final String __OBFID = "CL_00001651";
 
    public EntityBigFish(World par1World) {
       super(par1World);

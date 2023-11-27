@@ -37,7 +37,6 @@ import net.minecraft.world.World;
 public class EntityBigEar extends EntityTameable {
    private float field_70926_e;
    private float field_70924_f;
-   private static final String __OBFID = "CL_00001654";
    private boolean necklace;
 
    public EntityBigEar(World par1World) {

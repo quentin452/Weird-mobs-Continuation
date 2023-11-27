@@ -24,7 +24,6 @@ import net.minecraft.world.World;
 public class ItemSpawnWitherCreeper extends Item {
    @SideOnly(Side.CLIENT)
    private IIcon theIcon;
-   private static final String __OBFID = "CL_00000070";
 
    public ItemSpawnWitherCreeper(int i) {
       this.setCreativeTab(CreativeTabs.tabMisc);

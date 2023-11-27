@@ -40,14 +40,11 @@ public class EntityWitherCreeper extends EntityMob implements IBossDisplayData, 
    private int[] field_82224_i = new int[2];
    private int field_82222_j;
    private static final IEntitySelector attackEntitySelector = new IEntitySelector() {
-      private static final String __OBFID = "CL_00001662";
 
       public boolean isEntityApplicable(Entity par1Entity) {
          return par1Entity instanceof EntityLivingBase && ((EntityLivingBase)par1Entity).getCreatureAttribute() != EnumCreatureAttribute.UNDEAD;
       }
    };
-   private static final String __OBFID = "CL_00001661";
-
    public EntityWitherCreeper(World par1World) {
       super(par1World);
       this.setHealth(this.getMaxHealth());

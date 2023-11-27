@@ -17,7 +17,6 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class EntitySpiderCreeper extends EntityMob {
-   private static final String __OBFID = "CL_00001699";
    private int fuseTime = 30;
    private int timeSinceIgnited;
    private boolean played = false;
@@ -227,7 +226,6 @@ public class EntitySpiderCreeper extends EntityMob {
 
    public static class GroupData implements IEntityLivingData {
       public int field_111105_a;
-      private static final String __OBFID = "CL_00001700";
 
       public void func_111104_a(Random par1Random) {
          int i = par1Random.nextInt(5);
