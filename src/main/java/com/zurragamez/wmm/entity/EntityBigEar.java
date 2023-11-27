@@ -38,7 +38,14 @@ public class EntityBigEar extends EntityTameable {
    private float field_70926_e;
    private float field_70924_f;
    private boolean necklace;
+    private String ownerName;
 
+    public String getOwnerName(){
+        return ownerName;
+    }
+    public void setOwner(String name){
+        ownerName = name;
+    }
    public EntityBigEar(World par1World) {
       super(par1World);
       this.setSize(0.6F, 1.3F);
