@@ -3,7 +3,8 @@ package com.zurragamez.wmm.item;
 import net.minecraft.item.ItemFood;
 
 public class ItemRawFood extends ItemFood {
-   public ItemRawFood(int i, int p_i45340_1_, boolean p_i45340_2_) {
-      super(p_i45340_1_, p_i45340_2_);
-   }
+
+    public ItemRawFood(int i, int p_i45340_1_, boolean p_i45340_2_) {
+        super(p_i45340_1_, p_i45340_2_);
+    }
 }
