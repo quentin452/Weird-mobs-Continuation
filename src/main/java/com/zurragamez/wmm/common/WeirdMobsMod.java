@@ -1,9 +1,19 @@
 package com.zurragamez.wmm.common;
 
+import com.zurragamez.wmm.block.BlockTerrorTricksterBlock;
+import com.zurragamez.wmm.entity.*;
+import com.zurragamez.wmm.item.*;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -12,18 +22,10 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.zurragamez.wmm.block.BlockTerrorTricksterBlock;
-import com.zurragamez.wmm.entity.*;
-import com.zurragamez.wmm.item.*;
-
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
+import java.util.List;
 
 @Mod(modid = "Weird Mobs Mod 2", name = "Weird Mobs Mod", version = "2 Alpha 3")
 public class WeirdMobsMod {
@@ -206,7 +208,7 @@ public class WeirdMobsMod {
             EntityTerrorTrickster.class,
             "Terror Trickster",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityTerrorTrickster.class, 1, 2, 6, EnumCreatureType.ambient);
+        this.registerSpawnOverWorld(EntityTerrorTrickster.class, 1, 2, 6, EnumCreatureType.ambient);
         this.registerSpawnEgg(EntityTerrorTrickster.class, 13027014, 14803425);
         EntityRegistry
             .registerGlobalEntityID(EntityTrinitope.class, "Trinitope", EntityRegistry.findGlobalUniqueEntityId());
@@ -265,11 +267,47 @@ public class WeirdMobsMod {
                     min,
                     max,
                     type,
-                    new BiomeGenBase[] { BiomeGenBase.getBiomeGenArray()[i] });
+                        BiomeGenBase.getBiomeGenArray()[i]);
             }
         }
 
     }
+    @SuppressWarnings("unchecked")
+    public void registerSpawnOverWorld(Class<?> entityClass, int spawnNumber, int min, int max, EnumCreatureType type) {
+        for (int i = 0; i < BiomeGenBase.getBiomeGenArray().length; ++i) {
+            BiomeGenBase biome = BiomeGenBase.getBiomeGenArray()[i];
+            if (biome != null && biome.biomeID < 128
+                && biome != BiomeGenBase.ocean
+                && biome != BiomeGenBase.river
+                && biome != BiomeGenBase.hell
+                && entityClass != null) {
+                addSpawnOverworld((Class<? extends EntityLiving>) entityClass, spawnNumber, min, max, type, biome);
+            }
+        }
+    }
+
+    public static void addSpawnOverworld(Class<? extends EntityLiving> entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, BiomeGenBase... biomes) {
+        for (BiomeGenBase biome : biomes) {
+            if (biome != BiomeGenBase.hell) {
+                @SuppressWarnings("unchecked")
+                List<BiomeGenBase.SpawnListEntry> spawns = biome.getSpawnableList(typeOfCreature);
+                boolean found = false;
+                for (BiomeGenBase.SpawnListEntry entry : spawns) {
+                    if (entry.entityClass == entityClass) {
+                        entry.itemWeight = weightedProb;
+                        entry.minGroupCount = min;
+                        entry.maxGroupCount = max;
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    spawns.add(new BiomeGenBase.SpawnListEntry(entityClass, weightedProb, min, max));
+                }
+            }
+        }
+    }
+
 
     @EventHandler
     public void load(FMLInitializationEvent e) {
