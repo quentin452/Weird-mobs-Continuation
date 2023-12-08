@@ -276,15 +276,36 @@ public class WeirdMobsMod {
     public void registerSpawnOverWorld(Class<?> entityClass, int spawnNumber, int min, int max, EnumCreatureType type) {
         for (int i = 0; i < BiomeGenBase.getBiomeGenArray().length; ++i) {
             BiomeGenBase biome = BiomeGenBase.getBiomeGenArray()[i];
-            if (biome != null && biome.biomeID < 128
-                && biome != BiomeGenBase.ocean
-                && biome != BiomeGenBase.river
-                && biome != BiomeGenBase.hell
-                && entityClass != null) {
+            if(biome != null && biome.biomeID < 128 && contains(biome) && entityClass != null) {
                 addSpawnOverworld((Class<? extends EntityLiving>) entityClass, spawnNumber, min, max, type, biome);
             }
         }
     }
+    public boolean contains(BiomeGenBase biome) {
+        for(BiomeGenBase authBiome : biomeListWhiteslistedbiomes) {
+            if(authBiome == biome) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    BiomeGenBase[] biomeListWhiteslistedbiomes = {
+        BiomeGenBase.forest,
+        BiomeGenBase.plains,
+        BiomeGenBase.forestHills,
+        BiomeGenBase.taiga,
+        BiomeGenBase.taigaHills,
+        BiomeGenBase.swampland,
+        BiomeGenBase.extremeHills,
+        BiomeGenBase.jungle,
+        BiomeGenBase.jungleEdge,
+        BiomeGenBase.jungleHills,
+        BiomeGenBase.beach,
+        BiomeGenBase.mesa,
+        BiomeGenBase.mesaPlateau,
+        BiomeGenBase.mushroomIsland,
+    };
 
     public static void addSpawnOverworld(Class<? extends EntityLiving> entityClass, int weightedProb, int min, int max, EnumCreatureType typeOfCreature, BiomeGenBase... biomes) {
         for (BiomeGenBase biome : biomes) {
