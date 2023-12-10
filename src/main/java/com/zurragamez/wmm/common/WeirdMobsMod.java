@@ -121,7 +121,7 @@ public class WeirdMobsMod {
             .registerGlobalEntityID(EntityBigFish.class, "Big Fish", EntityRegistry.findGlobalUniqueEntityId());
         EntityRegistry.addSpawn(
             EntityBigFish.class,
-            70,
+            3,
             5,
             15,
             EnumCreatureType.waterCreature,
@@ -129,72 +129,72 @@ public class WeirdMobsMod {
         this.registerSpawnEgg(EntityBigFish.class, 3227729, 5316640);
         EntityRegistry
             .registerGlobalEntityID(EntityBUDRBot.class, "BUDR Bot", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityBUDRBot.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityBUDRBot.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityBUDRBot.class, 6182967, 16577861);
         EntityRegistry.registerGlobalEntityID(
             EntityButterMonger.class,
             "Butter Monger",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityButterMonger.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityButterMonger.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityButterMonger.class, 12691762, 1446661);
         EntityRegistry
             .registerGlobalEntityID(EntityCoohBird.class, "Cooh Bird", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityCoohBird.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityCoohBird.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityCoohBird.class, 11879680, 5517082);
         EntityRegistry
             .registerGlobalEntityID(EntityCrazyBird.class, "Crazy Bird", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityCrazyBird.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityCrazyBird.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityCrazyBird.class, 9276813, 16350478);
         EntityRegistry
             .registerGlobalEntityID(EntityCyclopsMan.class, "Cyclops Man", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityCyclopsMan.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityCyclopsMan.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityCyclopsMan.class, 12018726, 8618883);
         EntityRegistry.registerGlobalEntityID(
             EntityDistortedMan.class,
             "Distorted Man",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityDistortedMan.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityDistortedMan.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityDistortedMan.class, 16756613, 7839281);
         EntityRegistry
             .registerGlobalEntityID(EntityFatFish.class, "Fat Fish", EntityRegistry.findGlobalUniqueEntityId());
         EntityRegistry.addSpawn(
             EntityFatFish.class,
-            70,
+            3,
             5,
             15,
             EnumCreatureType.waterCreature,
             new BiomeGenBase[] { BiomeGenBase.ocean });
         this.registerSpawnEgg(EntityFatFish.class, 8026746, 5987163);
         EntityRegistry.registerGlobalEntityID(EntityFatMan.class, "Fat Man", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityFatMan.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityFatMan.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityFatMan.class, 12027505, 10905148);
         EntityRegistry
             .registerGlobalEntityID(EntityGooftile.class, "Gooftile", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityGooftile.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityGooftile.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityGooftile.class, 3045098, 793659);
         EntityRegistry
             .registerGlobalEntityID(EntityKnifeMan.class, "Knife Man", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityKnifeMan.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityKnifeMan.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityKnifeMan.class, 4605510, 7286832);
         EntityRegistry
             .registerGlobalEntityID(EntityPotionStick.class, "Potion Stick", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityPotionStick.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityPotionStick.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityPotionStick.class, 1622287, 6703385);
         EntityRegistry.registerGlobalEntityID(
             EntitySpiderCreeper.class,
             "Spider Creeper",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntitySpiderCreeper.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntitySpiderCreeper.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntitySpiderCreeper.class, 10230807, 4208688);
         EntityRegistry.registerGlobalEntityID(
             EntitySpinningFeets.class,
             "Spinning Feets",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntitySpinningFeets.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntitySpinningFeets.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntitySpinningFeets.class, 2960685, 11696970);
         EntityRegistry
             .registerGlobalEntityID(EntityStickMan.class, "Stick Man", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityStickMan.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityStickMan.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityStickMan.class, 16777215, 0);
         EntityRegistry.registerGlobalEntityID(
             EntityStickManBaby.class,
@@ -202,7 +202,7 @@ public class WeirdMobsMod {
             EntityRegistry.findGlobalUniqueEntityId());
         EntityRegistry
             .registerGlobalEntityID(EntityTallMan.class, "Tall Man", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityTallMan.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityTallMan.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityTallMan.class, 5329492, 15456628);
         EntityRegistry.registerGlobalEntityID(
             EntityTerrorTrickster.class,
@@ -212,29 +212,29 @@ public class WeirdMobsMod {
         this.registerSpawnEgg(EntityTerrorTrickster.class, 13027014, 14803425);
         EntityRegistry
             .registerGlobalEntityID(EntityTrinitope.class, "Trinitope", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityTrinitope.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityTrinitope.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityTrinitope.class, 8323072, 15687424);
         EntityRegistry
             .registerGlobalEntityID(EntityVestCreeper.class, "Vest Creeper", EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityVestCreeper.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityVestCreeper.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityVestCreeper.class, 6213708, 14369818);
         EntityRegistry.registerGlobalEntityID(
             EntityVillagerHead.class,
             "Villager Head",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityVillagerHead.class, 70, 2, 6, EnumCreatureType.monster);
+        this.registerSpawn(EntityVillagerHead.class, 3, 2, 6, EnumCreatureType.monster);
         this.registerSpawnEgg(EntityVillagerHead.class, 12422002, 10335591);
         EntityRegistry.registerGlobalEntityID(
             EntityWalkingPainting.class,
             "Walking Painting",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityWalkingPainting.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityWalkingPainting.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityWalkingPainting.class, 18573, 4862504);
         EntityRegistry.registerGlobalEntityID(
             EntityWalkingRadio.class,
             "Walking Radio",
             EntityRegistry.findGlobalUniqueEntityId());
-        this.registerSpawn(EntityWalkingRadio.class, 70, 2, 6, EnumCreatureType.creature);
+        this.registerSpawn(EntityWalkingRadio.class, 3, 2, 6, EnumCreatureType.creature);
         this.registerSpawnEgg(EntityWalkingRadio.class, 6250335, 16646915);
         EntityRegistry.registerGlobalEntityID(
             EntityWitherCreeper.class,
